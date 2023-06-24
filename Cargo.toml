@@ -1,0 +1,23 @@
+[package]
+edition = "2021"
+license = "Proprietary"
+name = "tracing-stable-trace-id-example"
+publish = false
+version = "0.1.0"
+
+[dependencies]
+chrono = "0.4"
+opentelemetry = { version = "0.19", features = ["rt-tokio"] }
+opentelemetry-otlp = { version = "0.12", features = [
+    "http-proto",
+    "reqwest-client",
+] }
+opentelemetry-semantic-conventions = "0.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.28", features = ["rt"] }
+tracing = "0.1"
+tracing-log = "0.1"
+tracing-opentelemetry = "0.19"
+tracing-serde = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "json"] }
